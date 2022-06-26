@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --background-color: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --cyan: hsl(158, 36%, 37%);
+    --dark-cyan: hsl(156, 42%, 18%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.photo {
+    width: 50%;
+}
+
+/* .photo {
+    width: 300px;
+} */
+
+main {
+    display: flex;
+    height: 450px;
+    width: 600px;
+}
+
+img {
+    height: 100%;
+    border-top-left-radius: 4%;
+    border-bottom-left-radius: 4%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: var(--white);
+    border-top-right-radius: 4%;
+    border-bottom-right-radius: 4%;
+    padding: 35px;
+}
+
+.prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+    font-size: 28px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.grayish-blue {
+    color: var(--grayish-blue);
+}
+
+.dark-blue {
+    color: var(--dark-blue);
+}
+
+.cyan {
+    font-family: "Fraunces", serif;
+    font-size: 28px;
+    color: var(--cyan);
+}
+
+.line-through-price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+button {
+    height: 30px;
+    width: 95%;
+    background-color: var(--cyan);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+}
+
+button:hover {
+    background-color: var(--dark-cyan);
+}
+
+.cart {
+    height: 16px;
+    width: auto;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 75%;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        border-top-right-radius: 4%;
+        border-bottom-left-radius: 0%;
+    }
+    .photo {
+        width: 100%;
+    }
+}
